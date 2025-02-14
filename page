@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín ❤️</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <div class="message">Feliz San Valentín, mi amor 💖</div>
+    <button class="button" onclick="sendWhatsApp()">Comparte por WhatsApp</button>
+
+    <script>
+        function sendWhatsApp() {
+            const message = encodeURIComponent("Feliz San Valentín ❤️ Mira esta sorpresa: https://tusorpresa.com");
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
